@@ -7,8 +7,10 @@ date_default_timezone_set('Europe/Paris');
 $heure = (int)date('G'); // Récupérer l'heure d'aujourd'hui
 $creneaux = CRENEAUX[date('N') - 1]; // Récupérer les créneaux d'aujourd'hui $creneaux
 $ouvert = in_creneaux($heure, $creneaux); // Récupérer l'état d'ouverture du magasin
-$color = $ouvert ? 'green' : 'red';
-// if ($ouvert) { $color = 'green';} else { $color = 'red'; }
+$color = 'green';
+if (!$ouvert) {
+    $color = 'red';
+}
 require 'header.php';
 
 ?>
