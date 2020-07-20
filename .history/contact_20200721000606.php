@@ -24,7 +24,7 @@ require 'header.php';
         </p>
     </div>
     <div class="col-md-4">
-        <h3>Horaires d'ouvertures</h3>
+        <h3>Horaire d'ouvertures</h3>
 
         <?php if ($ouvert) : ?>
             <div class="alert alert-success">

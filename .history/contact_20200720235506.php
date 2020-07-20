@@ -8,8 +8,8 @@ $heure = (int)($_GET['heure'] ?? date('G')); // Récupérer l'heure d'aujourd'hu
 $jour = (int)($_GET['jour'] ?? date('N') - 1);
 $creneaux = CRENEAUX[$jour]; // Récupérer les créneaux d'aujourd'hui $creneaux
 $ouvert = in_creneaux($heure, $creneaux); // Récupérer l'état d'ouverture du magasin
-$color = $ouvert ? 'green' : 'red'; // Ternaire
-/* if ($ouvert) { $color = 'green';} else { $color = 'red'; } */
+$color = $ouvert ? 'green' : 'red';
+// if ($ouvert) { $color = 'green';} else { $color = 'red'; }
 require 'header.php';
 
 ?>
@@ -24,7 +24,7 @@ require 'header.php';
         </p>
     </div>
     <div class="col-md-4">
-        <h3>Horaires d'ouvertures</h3>
+        <h3>Horaire d'ouvertures</h3>
 
         <?php if ($ouvert) : ?>
             <div class="alert alert-success">

@@ -24,9 +24,9 @@ function select(string $name, $value, array $options): string {
     $html_options = [];
     foreach ($options as $k => $option) {
         $attributes = $k == $value ? ' selected' : '';
-        $html_options[] = "<option value='$k' $attributes>$option</option>";
+        $html_options[] = "<option value='$k'>$option</option>";
     }
-    return "<select class='form-control' name='$name'>" . implode($html_options) . '</select>';
+    return "<select class="form-control" name="$name">" . implode($html_options) . '</select>';
 }
 
 function dump($variable){
