@@ -22,15 +22,12 @@ require 'header.php';
     </div>
     <div class="col-md-4">
         <h3>Horaire d'ouvertures</h3>
-        <?php if($ouvert): ?> 
-            <div class="alert alert-success">
-                Le magasin est ouvert.
-            </div>
-        <?php else: ?>
-            <div class="alert alert-danger">
-                Le magasin est fermé.
-            </div>
-        <?php endif ?>
+        <div class="alert alert-success">
+            Le magasin est ouvert.
+        </div>
+        <div class="alert alert-danger">
+            Le magasin est fermé.
+        </div>
         <ul>
             <?php foreach(JOURS as $k => $jour): ?>
                 <li <?php if($k + 1 === (int)date('N')): ?> style="color:green"<?php endif ?>>

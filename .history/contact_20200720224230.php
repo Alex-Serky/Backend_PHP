@@ -23,13 +23,13 @@ require 'header.php';
     <div class="col-md-4">
         <h3>Horaire d'ouvertures</h3>
         <?php if($ouvert): ?> 
-            <div class="alert alert-success">
-                Le magasin est ouvert.
-            </div>
+        <div class="alert alert-success">
+            Le magasin est ouvert.
+        </div>
         <?php else: ?>
-            <div class="alert alert-danger">
-                Le magasin est fermé.
-            </div>
+        <div class="alert alert-danger">
+            Le magasin est fermé.
+        </div>
         <?php endif ?>
         <ul>
             <?php foreach(JOURS as $k => $jour): ?>

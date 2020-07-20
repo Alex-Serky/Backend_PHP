@@ -3,10 +3,6 @@
 $title = 'Nous contacter !';
 require_once 'config.php';
 require_once 'functions.php';
-date_default_timezone_set('Europe/Paris');
-$heure = (int)date('G'); // Récupérer l'heure d'aujourd'hui
-$creneaux = CRENEAUX[date('N') - 1]; // Récupérer les créneaux d'aujourd'hui $creneaux
-$ouvert = in_creneaux($heure, $creneaux); // Récupérer l'état d'ouverture du magasin
 require 'header.php';
 
 ?>
@@ -22,15 +18,7 @@ require 'header.php';
     </div>
     <div class="col-md-4">
         <h3>Horaire d'ouvertures</h3>
-        <?php if($ouvert): ?> 
-            <div class="alert alert-success">
-                Le magasin est ouvert.
-            </div>
-        <?php else: ?>
-            <div class="alert alert-danger">
-                Le magasin est fermé.
-            </div>
-        <?php endif ?>
+        <?php date('N') ?>
         <ul>
             <?php foreach(JOURS as $k => $jour): ?>
                 <li <?php if($k + 1 === (int)date('N')): ?> style="color:green"<?php endif ?>>

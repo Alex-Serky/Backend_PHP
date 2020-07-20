@@ -42,12 +42,5 @@ function creneaux_html($creneaux){
 }
 
 function in_creneaux(int $heure, array $creneaux): bool {
-    foreach($creneaux as $creneau) {
-        $debut = $creneau[0];
-        $fin = $creneau[1];
-        if ($heure >= $debut && $heure < $fin) {
-            return true;
-        }
-    }
-    return false;
+    
 }
